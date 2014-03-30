@@ -1,0 +1,27 @@
+{
+	"name": "sg-observable-array",
+	"version": "0.0.0",
+	"description": "",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "mocha test/*.js",
+		"posttest": "mocha test/readme.js -R markdown > README.md"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidtsuji/sg-observable-array"
+	},
+	"author": "David Tsuji",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/davidtsuji/sg-observable-array/issues"
+	},
+	"homepage": "https://github.com/davidtsuji/sg-observable-array",
+	"devDependencies": {
+		"mocha": "^1.18.2",
+		"should": "^3.1.4",
+		"gulp": "^3.5.6",
+		"gulp-shell": "^0.2.4"
+	},
+	"dependencies": {}
+}
