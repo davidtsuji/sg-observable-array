@@ -34,13 +34,13 @@ var ObservableArray = function ( _array ) {
 
 	Object.defineProperty( array, 'shift', {
 		value: function () {
-			return proxy( 'unshift', array[ 0 ] );
+			return proxy( 'shift', array[ 0 ] );
 		}
 	} );
 
 	Object.defineProperty( array, '__shift', {
 		value: function () {
-			return Array.prototype.unshift.apply( array, arguments );
+			return Array.prototype.shift.apply( array, arguments );
 		}
 	} );
 

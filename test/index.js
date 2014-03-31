@@ -37,6 +37,7 @@ describe( 'Observable Array', function () {
 
 			tags.shift().should.eql( 1 );
 			tags.should.have.a.lengthOf( 2 );
+			tags.should.eql( [ 2, 3 ] );
 		} );
 
 		it( 'should still be able to sort', function () {
@@ -107,7 +108,7 @@ describe( 'Observable Array', function () {
 			var tags = ObservableArray( [ 1, 2, 3 ] );
 
 			tags.on( 'shift', function ( _value ) {
-				should( _value ).eql( undefined );
+				should( _value ).eql( 1 );
 				return 'shifted';
 			} );
 
