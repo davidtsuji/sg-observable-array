@@ -32,19 +32,19 @@ var ObservableArray = function ( _array ) {
 		}
 	} );
 
-	Object.defineProperty( array, 'unshift', {
+	Object.defineProperty( array, 'shift', {
 		value: function () {
 			return proxy( 'unshift', array[ 0 ] );
 		}
 	} );
 
-	Object.defineProperty( array, '__unshift', {
+	Object.defineProperty( array, '__shift', {
 		value: function () {
 			return Array.prototype.unshift.apply( array, arguments );
 		}
 	} );
 
-	[ 'push', 'reverse', 'shift', 'sort', 'splice' ].forEach( function ( _method ) {
+	[ 'push', 'reverse', 'unshift', 'sort', 'splice' ].forEach( function ( _method ) {
 		var properties = {};
 
 		properties[ _method ] = {
